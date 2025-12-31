@@ -2,16 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserComponent } from './components/user/user';
 import { RandomUserService } from './services/random-user';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, UserComponent],
+  imports: [CommonModule, UserComponent, MatSlideToggleModule],
   templateUrl: './app.html'
 })
 export class App implements OnInit {
 
-  user: any = {};
+  user: any;
 
   constructor(private randomUserService: RandomUserService) {}
 
